@@ -1,73 +1,113 @@
+:root {
+  --navbar-colour: #ccffdd;
+  --link-colour: #000000;
+  --link-hover-colour: #0f101a96;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 html {
   scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
-a:link {
-  text-decoration: none;
+h1 {
+  font-size: 15vh;
 }
 
-a:visited {
-  text-decoration: none;
+h2 {
+  font-size: 5vh;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: underline;
-}
+/* Styling for the navbar*/
 nav {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-between;
-}
-.navbar ul {
-    list-style: none;
-    align-self: center;
+  position: fixed; 
+  width: 100vw;
+  background-color:var(--navbar-colour);
+  box-shadow:  0px 2px 5px 0px rgba(0, 0, 0, 0.4) ;
 }
 
-.navbar li {
-    display: inline-block;
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 32px 16px 32px;
+}
+#nav-items {
+  margin: 0;
+  list-style: none;
+  align-self: center;
 }
 
-.navbar img {
-    height: 100px;
-    width: 100px;
+.nav-item {
+  display: inline-block;
+  padding: 1em;
+}
+.nav-item a {
+  text-decoration: none;
+  color: var(--link-colour);
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.nav-item a:hover {
+  color: var( --link-hover-colour);
+}
+.nav-logo {
+  height: 50px;
+  width: 50px;
 }
 
-
+/* Styling for the main part of the website */
 .section{
   height: 100vh;
-  border-style: solid;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
 }
 
 .section{
-  background-color: aqua;
+  background-color:#EFF7CF;
+  font-family: 'Amatic SC', cursive;
 }
 
 .section:nth-child(odd){
-  background-color: red;
+  background-color: #CBC5EA;
 }
 
 #title {
   align-self: center;
   text-align: center;
-  font-family: 'Amatic SC', cursive;
-}
-#title h1 {
-  font-size: 15vh;
 }
 
 #title h2 {
-  font-size: 5vh;
   font-style: italic;
+}
+
+/* Styling for the projects section */
+#projects {
+  align-self: center;
+  text-align: center;
+  font-size: 5vh;
+  height: 50vh;
+  width: 70vw;
+  border-style: solid;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.project {
+  height: 75%;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}
+.project img {
+  height: 20%;
 }
